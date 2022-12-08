@@ -23,7 +23,10 @@
 ---
 
 ## Документация
-///
+- [План автоматизации](https://github.com/Olelucoe/Diplom_QA/blob/main/Documents/Plan.md)
+- Отчет по итогам тестирования
+- Комплексный отчёт по итогам автоматизации
+
 ## **Перед началом работы**
 
 Первое, что необходимо сделать - загрузить на свой ПК репозиторий с проектом. Для этого либо воспользуйтесь командой git clone, либо в IntelliJ IDEA нажмите "Get from Version Control" и вставьте ссылку https://github.com/Olelucoe/Diplom_QA в поле URL, нажмите "Clone".
@@ -80,7 +83,8 @@ java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifac
 ```
 
 Дождаться сообщения в терминале, которое будет означать, что приложение успешно запущено:
-![image](Снимок cmd java jar.JPG)
+![Снимок cmd java jar](https://user-images.githubusercontent.com/106590777/206429142-1b43b471-cd30-4467-9e66-922b4c174810.JPG)
+
 
 Сервис будет доступен в браузере по адресу: _http://localhost:8080/_
 
