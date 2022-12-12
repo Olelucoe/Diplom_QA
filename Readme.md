@@ -41,7 +41,7 @@
 ---
 ### Установка и запуск
 
-1) Запускаем контейнеры из файла **docker-compose.yml** командой в терминале:
+1. Запускаем контейнеры из файла **docker-compose.yml** командой в терминале:
 
 ```
 docker-compose up -d
@@ -52,9 +52,9 @@ docker-compose up -d
 ```
 docker-compose ps
 ```
+_Ожидаемый статус контейнеров - **UP**_
 
-Ожидаемый статус контейнеров - **UP**
-2) Запускаем SUT командой в терминале:
+2. Запускаем SUT командой в терминале:
 
 - для MySQL:
 
@@ -68,7 +68,7 @@ java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aq
 java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar
 ```
 
-3) Запускаем авто-тесты командой в терминале:
+3. Запускаем авто-тесты командой в терминале:
 
 - для MySQL:
 
@@ -88,7 +88,7 @@ java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifac
 
 Сервис будет доступен в браузере по адресу: _http://localhost:8080/_
 
-4) Генерируем отчёт по итогам тестирования с помощью **Allure**. Отчёт автоматически откроется в браузере с помощью команды в терминале:
+4. Генерируем отчёт по итогам тестирования с помощью **Allure**. Отчёт автоматически откроется в браузере с помощью команды в терминале:
 
 ```
 ./gradlew allureServe
