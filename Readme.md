@@ -24,8 +24,8 @@
 
 ## Документация
 - [План автоматизации](https://github.com/Olelucoe/Diplom_QA/blob/main/Documents/Plan.md)
-- Отчет по итогам тестирования
-- Комплексный отчёт по итогам автоматизации
+- [Отчет по итогам тестирования](https://github.com/Olelucoe/Diplom_QA/blob/main/Documents/Report.md)
+- [Итоговый отчёт по автоматизации](https://github.com/Olelucoe/Diplom_QA/blob/main/Documents/Summary.md)
 
 ## **Перед началом работы**
 
