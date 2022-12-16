@@ -73,13 +73,13 @@ java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifac
 - для MySQL:
 
 ```
-./gradlew clean test "-Ddatasource.url=jdbc:mysql://localhost:3306/app"
+./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app"
 ```
 
 - для PostgreSQL:
 
 ```
-./gradlew clean test "-Ddatasource.url=jdbc:postgresql://localhost:5432/app"
+./gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"
 ```
 
 Дождаться сообщения в терминале, которое будет означать, что приложение успешно запущено:
