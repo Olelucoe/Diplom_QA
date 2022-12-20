@@ -1,7 +1,7 @@
 package tests;
 
-import Data.DataHelper;
-import Data.SQLHelper;
+import data.DataHelper;
+import data.SQLHelper;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;

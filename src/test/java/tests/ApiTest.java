@@ -1,17 +1,14 @@
 package tests;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
+import data.RestApiHelper;
+import data.SQLHelper;
 import io.qameta.allure.selenide.AllureSelenide;
-import lombok.val;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-import static Data.DataHelper.getApprovedCard;
-import static Data.DataHelper.getDeclinedCard;
-import static Data.RestApiHelper.creditRequest;
-import static Data.RestApiHelper.paymentRequest;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static data.DataHelper.*;
+import static data.RestApiHelper.paymentRequest;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ApiTest {
 
@@ -22,33 +19,41 @@ public class ApiTest {
     @AfterAll
     static void tearDownAll() {
         SelenideLogger.removeListener("allure");
-
     }
+    @BeforeEach
+     void connectDB(){
+        SQLHelper.getConn();
+    }
+    @AfterEach
+     void cleanDB(){
+        SQLHelper.cleanDatabase();
+    }
+
     @Test
     void shouldGiveResponseValidApprovedDebitCard() {
         var validApprovedCardForApi = getApprovedCard();
-        var response = paymentRequest(validApprovedCardForApi);
-        assertTrue(response.contains("APPROVED"));
+        var response = paymentRequest(validApprovedCardForApi, "/api/v1/pay");
+        assertTrue(response.contains(SQLHelper.getDebitPaymentStatus()));
     }
 
     @Test
     void shouldGiveResponseValidDeclinedDebitCard() {
         var validDeclinedCardForApi = getDeclinedCard();
-        var response = paymentRequest(validDeclinedCardForApi);
-        assertTrue(response.contains("DECLINED"));
+        var response = paymentRequest(validDeclinedCardForApi, "/api/v1/pay");
+        assertTrue(response.contains(SQLHelper.getDebitPaymentStatus()));
     }
 
     @Test
     void shouldGiveResponseValidApprovedCreditCard() {
         var validApprovedCardForApi = getApprovedCard();
-        var response = creditRequest(validApprovedCardForApi);
-        assertTrue(response.contains("APPROVED"));
+        var response = paymentRequest(validApprovedCardForApi, "/api/v1/credit");
+        assertTrue(response.contains(SQLHelper.getCreditPaymentStatus()));
     }
 
     @Test
     void shouldGiveResponseValidDeclinedCreditCard() {
         var validDeclinedCardForApi = getDeclinedCard();
-        var response = creditRequest(validDeclinedCardForApi);
-        assertTrue(response.contains("DECLINED"));
+        var response = paymentRequest(validDeclinedCardForApi, "/api/v1/credit");
+        assertTrue(response.contains(SQLHelper.getCreditPaymentStatus()));
     }
 }

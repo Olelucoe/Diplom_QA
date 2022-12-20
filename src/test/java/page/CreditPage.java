@@ -1,6 +1,6 @@
 package page;
 
-import Data.Card;
+import data.Card;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 

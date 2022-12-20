@@ -1,7 +1,6 @@
 package page;
 
-import Data.Card;
-import com.codeborne.selenide.Condition;
+import data.Card;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 
