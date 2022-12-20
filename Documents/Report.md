@@ -12,19 +12,19 @@
 ### Результаты выполнения автотестов:
 
 #### При подключении к СУБД MySQL:
-![report allure mysql](https://user-images.githubusercontent.com/106590777/207402185-d07542a7-f52a-47b7-8bca-176941176b8d.JPG)
+![report allure mysql](https://user-images.githubusercontent.com/106590777/208656470-5c76b4f6-5e7c-4b5b-8667-c827a2a52b79.JPG)
 
 ![allure payment page tests](https://user-images.githubusercontent.com/106590777/207403117-e25d3099-13ff-419d-ba9b-203453fcd279.JPG)
 
 ![allure credit page tests](https://user-images.githubusercontent.com/106590777/207403179-7a688719-3b3b-48db-844d-1214303be545.JPG)
 
-##### API-тесты
+#### API-тесты
 ![api test mysql](https://user-images.githubusercontent.com/106590777/207402629-0d09c4c0-8d0a-4fd6-9cd5-53a711376b18.JPG)
 
 Итого: 38 тестов - прошли успешно(73%), 14 тестов - провалены(27%).
 
 #### При подключении к СУБД PostgreSQL:
-![postgre report allure](https://user-images.githubusercontent.com/106590777/207406591-e169e545-79e1-48bd-8f8d-2441e54b5d06.JPG)
+![postgre report allure](https://user-images.githubusercontent.com/106590777/208656600-31ee7d80-4148-4986-8169-578392f6a6af.JPG)
 
 ![postgre allure payment page](https://user-images.githubusercontent.com/106590777/207407074-4ef9acd9-6305-4e26-9206-60a2e3216c9b.JPG)
 
